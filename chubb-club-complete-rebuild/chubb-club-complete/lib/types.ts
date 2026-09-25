@@ -1,0 +1,3 @@
+export type Player={id:string;espnId?:string;name:string;firstName?:string;lastName?:string;team:string;position:string;number?:number|null;status?:string;injuryStatus?:string|null;age?:number|null;yearsExp?:number|null;headshot:string};
+export type Expert={id:string;name:string;handle:string;role:'admin'|'expert'};
+export const experts:Expert[]=[{id:'cyrus',name:'Cyrus',handle:'@Cyrus',role:'admin'},{id:'aiden',name:'Aiden',handle:'@Aiden',role:'expert'},{id:'gerardo',name:'Gerardo',handle:'@Gerardo',role:'expert'},{id:'nehemiah',name:'Nehemiah',handle:'@Nehemiah',role:'expert'}];
