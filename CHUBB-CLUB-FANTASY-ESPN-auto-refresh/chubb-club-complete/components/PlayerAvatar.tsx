@@ -1,0 +1,2 @@
+'use client';import {useState} from 'react';import type {Player} from '@/lib/types';
+export default function PlayerAvatar({p,className='',alt}:{p:Player,className?:string,alt?:string}){const fall=p.sleeperHeadshot||`https://sleepercdn.com/content/nfl/players/${p.id}.jpg`;const [src,setSrc]=useState(p.headshot||fall);return src?<img className={className} src={src} alt={alt||`${p.name} headshot`} onError={()=>{if(src!==fall)setSrc(fall);else setSrc('')}}/>:<div className={`${className} avatarFallback`}>{p.name.split(' ').map(x=>x[0]).slice(0,2).join('')}</div>}

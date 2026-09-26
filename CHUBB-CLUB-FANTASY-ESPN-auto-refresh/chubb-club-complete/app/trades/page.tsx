@@ -1,0 +1,1 @@
+import TradeAnalyzerClient from '@/components/TradeAnalyzerClient';export default function Page(){return <section className="wrap section"><div className="eyebrow">Decision Tool</div><h1 className="pageTitle">Trade Analyzer</h1><p className="muted">Build both sides with real players and compare current fantasy value.</p><TradeAnalyzerClient/></section>}
