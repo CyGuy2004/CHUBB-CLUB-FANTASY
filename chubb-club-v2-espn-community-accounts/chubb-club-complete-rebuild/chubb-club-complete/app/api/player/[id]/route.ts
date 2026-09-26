@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {getPlayer,currentWeek} from '@/lib/players';
+export async function GET(_:Request,{params}:{params:{id:string}}){const p=await getPlayer(params.id);if(!p)return NextResponse.json({error:'Not found'},{status:404});return NextResponse.json({player:p,week:currentWeek(),stats:null,matchup:null,news:[],dataStatus:'Player identity is live. Stats/news/matchup require a licensed or supported provider connection.'})}

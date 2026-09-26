@@ -1,0 +1,1 @@
+import CommunityClient from '@/components/CommunityClient';export default function Page(){return <section className="wrap section"><div className="eyebrow">Fantasy Social</div><h1>Community</h1><CommunityClient/></section>}

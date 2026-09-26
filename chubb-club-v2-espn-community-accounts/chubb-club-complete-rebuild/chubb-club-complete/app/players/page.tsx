@@ -1,0 +1,1 @@
+import PlayersClient from '@/components/PlayersClient';export default function Page(){return <section className="wrap section"><div className="eyebrow">2026 Player Directory</div><h2>Current Fantasy Players</h2><p className="muted">Active fantasy-relevant players with a current NFL team. Team replaces the old FA label.</p><PlayersClient/></section>}
