@@ -1,0 +1,4 @@
+import './globals.css'; import Link from 'next/link'; import Image from 'next/image';
+export const metadata={title:'Chubb Club Fantasy',description:'Fantasy football decisions, rankings and community'};
+const nav=[['Players','/players'],['Rankings','/rankings'],['Start/Sit','/start-sit'],['Trades','/trades'],['Waivers','/waivers'],['Community','/community'],["Pick'em",'/pickem']];
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body><header><Link href="/" className="brand"><Image src="/chubb-club-logo.png" alt="Chubb Club" width={52} height={52}/><b>CHUBB CLUB</b></Link><nav>{nav.map(([a,b])=><Link key={b} href={b}>{a}</Link>)}</nav><div className="account"><Link href="/login">Log in</Link><Link className="pill" href="/signup">Sign up</Link></div></header><main>{children}</main><footer>© 2026 Chubb Club Fantasy • Fantasy information, rankings and community</footer></body></html>}
