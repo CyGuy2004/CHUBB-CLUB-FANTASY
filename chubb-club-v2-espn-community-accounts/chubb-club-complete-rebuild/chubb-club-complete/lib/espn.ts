@@ -105,3 +105,29 @@ export async function getEspnGames(): Promise<EspnGame[]> {
     return [];
   }
 }
+
+export function matchupFor(team: string, games: EspnGame[]) {
+  const normalizedTeam = team?.toUpperCase();
+
+  for (const game of games) {
+    if (game.home.toUpperCase() === normalizedTeam) {
+      return {
+        opponent: game.away,
+        home: true,
+        date: game.date,
+        status: game.status,
+      };
+    }
+
+    if (game.away.toUpperCase() === normalizedTeam) {
+      return {
+        opponent: game.home,
+        home: false,
+        date: game.date,
+        status: game.status,
+      };
+    }
+  }
+
+  return null;
+}
