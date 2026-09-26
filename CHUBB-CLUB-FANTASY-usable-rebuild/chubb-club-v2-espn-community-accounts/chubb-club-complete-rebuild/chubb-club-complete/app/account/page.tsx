@@ -1,1 +1,0 @@
-import AccountClient from '@/components/AccountClient';export default function Page(){return <section className="wrap section"><div className="eyebrow">Member Center</div><h1>My Account</h1><AccountClient/></section>}

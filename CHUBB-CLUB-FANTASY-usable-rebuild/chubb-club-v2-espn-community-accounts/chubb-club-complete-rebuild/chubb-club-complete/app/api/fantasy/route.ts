@@ -1,2 +1,0 @@
-import {NextResponse} from 'next/server';import {playerMetrics,trending,type Scoring} from '@/lib/fantasy';
-export async function GET(req:Request){const u=new URL(req.url);const scoring=(u.searchParams.get('scoring')||'ppr') as Scoring;const [metrics,adds,drops]=await Promise.all([playerMetrics(scoring),trending('add',30),trending('drop',20)]);return NextResponse.json({metrics,adds,drops},{headers:{'Cache-Control':'public, s-maxage=900, stale-while-revalidate=1800'}})}
