@@ -1,1 +1,0 @@
-import WaiversClient from '@/components/WaiversClient';export default function Page(){return <section className="wrap section"><div className="eyebrow">Waiver Wire</div><h1 className="pageTitle">Waivers & Sleepers</h1><p className="muted">See who fantasy managers are adding and find lower-ranked players with useful weekly projections.</p><WaiversClient/></section>}
